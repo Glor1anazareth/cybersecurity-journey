@@ -1,0 +1,18 @@
+# Wireshark: The Basics
+
+**Room:** [TryHackMe – Wireshark: The Basics](https://tryhackme.com/room/wiresharkthebasics)
+**Status:** Completed
+
+## Summary
+Introduced Wireshark's packet dissection model — breaking packets down
+across OSI layers (Ethernet, IP, TCP, HTTP) — and how to inspect file
+metadata and hashes via Capture File Properties.
+
+## Key Concepts
+- Packets are dissected layer-by-layer in the packet details pane;
+  clicking a layer highlights its corresponding raw bytes in the hex view
+- **Capture File Properties** exposes file hashes (SHA256, RIPEMD160,
+  SHA1) for the .pcapng itself — useful for verifying capture integrity
+  during evidence handling
+- Demonstrated reading an HTTP GET request/response across the TCP
+  stream reassembly
