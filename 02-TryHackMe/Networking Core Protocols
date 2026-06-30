@@ -1,0 +1,23 @@
+# Networking Core Protocols
+
+**Room:** [TryHackMe – Networking Core Protocols](https://tryhackme.com/room/networkingcoreprotocols)
+**Status:** Completed
+
+## Summary
+Practiced analyzing cleartext application-layer protocols (FTP, SMTP,
+POP3, IMAP) using both Wireshark traffic inspection and the command-line
+FTP client to retrieve files from a live target.
+
+## Key Commands
+\`\`\`bash
+ftp <target-ip>          # Connect to FTP server
+ls                        # List remote directory
+get flag.txt              # Retrieve file from server
+cat flag.txt               # Read file contents locally
+\`\`\`
+
+## Wireshark Analysis
+- Used **Follow TCP Stream** to reconstruct an entire FTP session
+  (USER/PASS authentication, PASV mode, RETR file transfer, QUIT)
+- Observed how FTP transmits credentials and commands in plaintext —
+  a key reason it's considered insecure for production use.
