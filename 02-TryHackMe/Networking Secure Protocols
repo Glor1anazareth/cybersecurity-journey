@@ -1,0 +1,29 @@
+# Networking Secure Protocols
+
+**Room:** [TryHackMe – Networking Secure Protocols](https://tryhackme.com/room/networkingsecureprotocols)
+**Status:** Completed
+
+## Summary
+Covered the encrypted counterparts of common cleartext protocols —
+SFTP, FTPS, SMTPS, POP3S, IMAPS, and SSH — and how they map to their
+insecure equivalents via TLS/SSL.
+
+## Cleartext → Secure Port Mapping
+| Cleartext Protocol | Port | Secure Protocol | Port |
+|---|---|---|---|
+| FTP | 21 | FTPS | 990 |
+| Telnet/SSH (control) | 23 | SSH | 22 |
+| SMTP | 25 | SMTPS | 587 |
+| POP3 | 110 | POP3S | 995 |
+| IMAP | 143 | IMAPS | 993 |
+
+## Key Concepts
+- **SFTP** runs over the SSH protocol suite (port 22), not a separate
+  encryption layer — commands like `get filename` / `put filename`
+  mirror FTP but ride inside an SSH session
+- **FTPS** secures FTP using TLS certificates, typically on port 990,
+  and requires separate control/data channel handling — trickier to
+  pass through strict firewalls than SFTP
+
+## Evidence
+![Secure protocol port mapping exercise](./screenshots/secure-protocol-mapping.png)
