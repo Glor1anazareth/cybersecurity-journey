@@ -1,0 +1,22 @@
+# Nmap: The Basics
+
+**Room:** [TryHackMe – Nmap: The Basics](https://tryhackme.com/room/nmap)
+**Status:** Completed
+
+## Summary
+Practiced host discovery and port scanning fundamentals — CIDR range
+scanning, identifying open TCP ports, and accessing discovered web
+services to retrieve flags.
+
+## Key Commands
+\`\`\`bash
+nmap 192.168.0.1/27          # Scan a CIDR range (32 addresses)
+nmap <target-ip>             # Default scan — top 1000 TCP ports
+nmap -sV <target-ip>         # Service/version detection
+\`\`\`
+
+## Key Takeaways
+- A /27 CIDR block covers 32 addresses (network + broadcast included),
+  so the scan range runs from `.0` to `.31`
+- Found 6 open TCP ports on the target, then identified a listening
+  web server and retrieved the flag directly via browser
