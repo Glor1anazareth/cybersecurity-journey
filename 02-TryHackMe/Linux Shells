@@ -1,0 +1,29 @@
+# Linux Shells
+
+**Room:** [TryHackMe – Linux Shells](https://tryhackme.com/room/linuxshells)
+**Status:** Completed
+
+## Summary
+Wrote and executed a basic Bash script using variables, the `echo`
+and `read` commands, and learned how script execution permissions and
+the `./` prefix work in Linux.
+
+## Script Example
+\`\`\`bash
+#!/bin/bash
+echo "Hey, what's your name?"
+read name
+echo "Welcome, $name"
+\`\`\`
+
+## Key Commands
+\`\`\`bash
+chmod +x first_script.sh      # Grant execute permission
+./first_script.sh             # Run the script from current directory
+\`\`\`
+
+## Key Takeaways
+- `./` is required to run a script in the current directory because
+  the shell only searches the `PATH` variable by default, not the
+  working directory
+- `read` captures user input into a variable for later reuse in the script
